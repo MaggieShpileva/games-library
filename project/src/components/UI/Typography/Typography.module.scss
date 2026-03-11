@@ -1,0 +1,30 @@
+@use '@styles/index.scss' as *;
+
+.typography {
+  margin: 0;
+  font-size: $font-size-sm;
+
+  @include tablet-sm {
+    font-size: $font-size-base;
+  }
+
+  @include desktop {
+    font-size: $font-size-xl;
+  }
+
+  @include large-desktop {
+    font-size: $font-size-2xl;
+  }
+}
+
+.regular {
+  font-weight: $font-weight-regular;
+}
+
+.medium {
+  font-weight: $font-weight-medium;
+}
+
+.bold {
+  font-weight: $font-weight-bold;
+}

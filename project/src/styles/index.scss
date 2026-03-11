@@ -1,0 +1,5 @@
+// Главный файл стилей - экспорт всех partials
+@forward './colors';
+@forward './variables';
+@forward './mixins';
+@forward './typography';

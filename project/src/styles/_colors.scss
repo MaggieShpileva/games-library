@@ -1,0 +1,32 @@
+// Основные цвета
+$black-005: #0a0a0a;
+$black-010: #141414;
+$black-020: #1f1f1f;
+$black-030: #2a2a2a;
+$black-040: #353535;
+$black-050: #404040;
+$white-005: #fafafa;
+$white-010: #f5f5f5;
+$white-020: #f0f0f0;
+$white-030: #ebebeb;
+$white-040: #e6e6e6;
+$white-050: #e0e0e0;
+
+// Семантические цвета
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$success-color: #28a745;
+$error-color: #dc3545;
+$warning-color: #ffc107;
+$info-color: #17a2b8;
+
+// Текст
+$text-primary: $black-005;
+$text-secondary: $black-030;
+$text-tertiary: $black-040;
+$text-inverse: $white-005;
+
+// Фон
+$bg-primary: $white-005;
+$bg-secondary: $white-010;
+$bg-tertiary: $white-020;

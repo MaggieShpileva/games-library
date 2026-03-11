@@ -1,0 +1,54 @@
+# Dependencies
+node_modules
+project/node_modules
+npm-debug.log
+
+# Build output
+dist
+project/dist
+build
+project/build
+.vite
+project/.vite
+
+# Development files
+.env.local
+.env.development
+.env.test
+
+# Git
+.git
+.gitignore
+.gitattributes
+.husky
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage
+.nyc_output
+
+# Logs
+logs
+*.log
+
+# Documentation
+README.md
+rules
+
+# CI/CD
+.github
+.gitlab-ci.yml
+
+# Docker
+.dockerignore
+

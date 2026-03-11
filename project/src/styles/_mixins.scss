@@ -1,0 +1,82 @@
+// Breakpoints
+$breakpoint-xs: 360px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1280px;
+$breakpoint-xl: 1600px;
+$breakpoint-2xl: 1920px;
+
+// Миксины для медиа-запросов
+
+// Очень маленькие экраны (≤359px)
+@mixin mobile-xs {
+  @media (max-width: #{$breakpoint-xs - 1px}) {
+    @content;
+  }
+}
+
+// Маленькие мобильные устройства (360px-767px)
+@mixin mobile-sm {
+  @media (min-width: $breakpoint-xs) and (max-width: #{$breakpoint-sm - 1px}) {
+    @content;
+  }
+}
+
+// Планшеты (768px-1023px)
+@mixin tablet-sm {
+  @media (min-width: $breakpoint-sm) and (max-width: #{$breakpoint-md - 1px}) {
+    @content;
+  }
+}
+
+// Малые десктопы (1024px-1279px)
+@mixin desktop-sm {
+  @media (min-width: $breakpoint-md) and (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+// Средние десктопы (1280px-1599px)
+@mixin desktop-md {
+  @media (min-width: $breakpoint-lg) and (max-width: #{$breakpoint-xl - 1px}) {
+    @content;
+  }
+}
+
+// Большие десктопы (1600px-1919px)
+@mixin desktop-lg {
+  @media (min-width: $breakpoint-xl) and (max-width: #{$breakpoint-2xl - 1px}) {
+    @content;
+  }
+}
+
+// Очень большие экраны (≥1920px)
+@mixin desktop-xl {
+  @media (min-width: $breakpoint-2xl) {
+    @content;
+  }
+}
+
+@mixin mobile($width: $breakpoint-xs) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin tablet($width: $breakpoint-sm) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin desktop($width: $breakpoint-md) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin large-desktop($width: $breakpoint-xl) {
+  @media (min-width: $width) {
+    @content;
+  }
+}

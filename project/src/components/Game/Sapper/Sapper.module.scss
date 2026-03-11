@@ -1,0 +1,183 @@
+@use '@styles/index.scss' as *;
+
+$rows: 12;
+$cols: 12;
+$size: 24px;
+
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  padding: 16px;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.actionSelector {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  cursor: default;
+
+  label {
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    transition:
+      background 0.2s,
+      transform 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(210, 210, 210, 0.5);
+    }
+  }
+}
+
+.actionActive {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  background: rgba(210, 210, 210, 0.9) !important;
+}
+
+.infos {
+  margin-bottom: 10px;
+  width: $cols * $size;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+
+.counter {
+  padding: 0 0.5rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #808080;
+  background: #ccc;
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  font-family: 'Roboto Mono', ui-monospace, monospace;
+}
+
+.counterEmoji {
+  font-size: 1rem;
+}
+
+.counterValue {
+  min-width: 2.5ch;
+  text-align: right;
+}
+
+.timer {
+  padding: 0 0.5rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #808080;
+  background: #ccc;
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  font-family: 'Roboto Mono', ui-monospace, monospace;
+}
+
+.digit {
+  min-width: 1ch;
+  display: inline-block;
+  text-align: center;
+}
+
+.grid {
+  width: $cols * $size;
+  min-height: $rows * $size;
+  position: relative;
+  display: flex;
+  border: solid #808080;
+  font-size: $size;
+  border-width: 1px 0 0 1px;
+  flex-flow: row wrap;
+  user-select: none;
+}
+
+.cell {
+  width: $size;
+  height: $size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid #808080;
+  background: #c0c0c0;
+  font-size: 0.9rem;
+  border-width: 0 1px 1px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: 'Roboto Mono', ui-monospace, monospace;
+  font-weight: bold;
+  overflow: hidden;
+
+  &:active:not(.cellRevealed) {
+    background: #bdbdbd;
+    border-color: #999;
+    border-width: 2px 0 0 2px;
+  }
+}
+
+.cellRevealed {
+  border: 1px solid #9e9e9e;
+  background: #e0e0e0;
+  cursor: default;
+
+  &::after {
+    display: none;
+  }
+}
+
+.cellMine {
+  background: #f00;
+  color: #000;
+}
+
+.cellNumber {
+  color: var(--num-color, #000);
+}
+
+.overlay {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: rgba(10, 0, 0, 0.75);
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+
+  &:hover {
+    background: rgba(20, 0, 0, 0.85);
+  }
+}
+
+.overlayVictory {
+  background: rgba(0, 10, 0, 0.75);
+
+  &:hover {
+    background: rgba(0, 20, 0, 0.85);
+  }
+}

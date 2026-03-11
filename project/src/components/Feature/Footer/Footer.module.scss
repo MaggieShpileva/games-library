@@ -1,0 +1,74 @@
+@use '@styles/index.scss' as *;
+
+.footer {
+  padding: $spacing-xl $spacing-lg;
+  margin-top: auto;
+  background-color: #1a1a1a;
+  border-top: 1px solid #333;
+}
+
+.footerContainer {
+  margin: 0 auto;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-md;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.copyright {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: $font-size-sm;
+  text-align: center;
+
+  @include tablet {
+    text-align: left;
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.linksList {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $spacing-lg;
+  list-style: none;
+
+  @include tablet {
+    justify-content: flex-end;
+  }
+}
+
+.link {
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $border-radius-sm;
+  color: #646cff;
+  font-size: $font-size-sm;
+  transition: color $transition-base;
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(100, 108, 255, 0.1);
+    color: #535bf2;
+  }
+
+  &:focus-visible {
+    border-radius: $border-radius-sm;
+    outline: 2px solid #646cff;
+    outline-offset: 2px;
+  }
+}

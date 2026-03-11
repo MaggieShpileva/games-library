@@ -1,0 +1,45 @@
+// Размеры шрифтов
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+$font-size-3xl: 30px;
+$font-size-4xl: 36px;
+$font-size-5xl: 48px;
+$font-size-6xl: 56px;
+
+// Высота строки
+$line-height-base: 1.5;
+$line-height-tight: 1.2;
+$line-height-loose: 1.8;
+
+// Отступы
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-2xl: 48px;
+
+// Радиусы скругления
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+
+// Тени
+$shadow-sm: 0 1px 2px 0 rgb(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgb(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgb(0, 0, 0, 0.1);
+
+// Переходы
+$transition-fast: 150ms;
+$transition-base: 250ms;
+$transition-slow: 350ms;
+
+// Шрифты
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;

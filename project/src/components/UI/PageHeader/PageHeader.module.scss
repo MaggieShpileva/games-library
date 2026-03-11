@@ -1,0 +1,16 @@
+@use '@styles/index.scss' as *;
+
+.header {
+  padding: 0 0 30px;
+  margin-right: auto;
+}
+
+.title {
+  margin: 10px 0;
+}
+
+.link,
+.linkText {
+  width: fit-content;
+  display: inline-block;
+}

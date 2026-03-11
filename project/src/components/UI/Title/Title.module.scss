@@ -1,0 +1,53 @@
+@use '@styles/index.scss' as *;
+
+.title {
+  font-family: var(--font-random-grotesque);
+}
+
+.regular {
+  font-weight: $font-weight-regular;
+}
+
+.medium {
+  font-weight: $font-weight-medium;
+}
+
+.title-1 {
+  font-size: $font-size-xl;
+
+  @include tablet-sm {
+    font-size: $font-size-2xl;
+  }
+
+  @include desktop-sm {
+    font-size: $font-size-3xl;
+  }
+
+  @include desktop-md {
+    font-size: $font-size-4xl;
+  }
+
+  @include desktop-lg {
+    font-size: $font-size-5xl;
+  }
+
+  @include desktop-xl {
+    font-size: $font-size-6xl;
+  }
+}
+
+.title-2 {
+  font-size: $font-size-xl;
+
+  @include tablet-sm {
+    font-size: $font-size-2xl;
+  }
+
+  @include desktop {
+    font-size: $font-size-3xl;
+  }
+
+  @include large-desktop {
+    font-size: $font-size-4xl;
+  }
+}

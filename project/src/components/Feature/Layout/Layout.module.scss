@@ -1,0 +1,16 @@
+@use '@styles/index.scss' as *;
+
+.layout {
+  margin: 0 auto;
+  max-width: 1920px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  padding: $spacing-xl;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}

@@ -1,0 +1,71 @@
+@use '@styles/index.scss' as *;
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.label {
+  margin-bottom: $spacing-xs;
+  display: block;
+  color: $text-secondary;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+}
+
+.input {
+  padding: $spacing-sm $spacing-md;
+  width: 100%;
+  border: 1px solid $black-040;
+  border-radius: $border-radius-md;
+  background-color: $bg-primary;
+  color: $text-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  transition:
+    border-color $transition-base,
+    box-shadow $transition-base;
+  font-family: inherit;
+
+  &:disabled {
+    background-color: $bg-secondary;
+    color: $text-tertiary;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.1);
+    border-color: #646cff;
+    outline: none;
+  }
+
+  &:hover:not(:disabled, :focus) {
+    border-color: $black-050;
+  }
+
+  &::placeholder {
+    color: $text-tertiary;
+  }
+}
+
+.error {
+  border-color: $error-color;
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+    border-color: $error-color;
+  }
+}
+
+.errorText {
+  margin-top: $spacing-xs;
+  display: block;
+  color: $error-color;
+  font-size: $font-size-sm;
+}

@@ -1,0 +1,46 @@
+@use '@styles/index.scss' as *;
+
+.notFound {
+  padding: $spacing-xl;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  color: #646cff;
+  font-size: $font-size-6xl;
+  line-height: $line-height-tight;
+  font-weight: $font-weight-bold;
+}
+
+.subtitle {
+  margin: $spacing-md 0;
+  color: #888;
+  font-size: $font-size-2xl;
+}
+
+.text {
+  margin-bottom: $spacing-xl;
+  color: #888;
+  font-size: $font-size-xl;
+}
+
+.link {
+  padding: $font-size-xs $spacing-lg;
+  display: inline-block;
+  border-radius: $border-radius-md;
+  background-color: #646cff;
+  color: white;
+  transition: background-color $transition-base;
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #535bf2;
+  }
+}

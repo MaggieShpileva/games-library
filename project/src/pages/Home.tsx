@@ -1,0 +1,16 @@
+import type { FC } from 'react';
+import { Link } from 'react-router-dom';
+import { Typography } from '@/components/UI';
+
+export const Home: FC = () => {
+  return (
+    <ul className="list">
+      <Link to="/sapper">
+        <Typography variant="regular">Сапер</Typography>
+      </Link>
+      <Link to="/space-huggers">
+        <Typography variant="regular">Space Huggers</Typography>
+      </Link>
+    </ul>
+  );
+};

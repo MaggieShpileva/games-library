@@ -1,0 +1,13 @@
+@use '@styles/index.scss' as *;
+
+.banner {
+  padding: $spacing-2xl $spacing-lg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-xl;
+}
+
+.bannerTitle {
+  text-align: center;
+}

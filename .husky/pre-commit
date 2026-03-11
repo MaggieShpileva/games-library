@@ -1,0 +1,7 @@
+cd project || exit 1
+
+# Проверка типов TypeScript
+npx tsc --noEmit || exit 1
+
+# Проверка линтинга и форматирования через lint-staged
+npx lint-staged

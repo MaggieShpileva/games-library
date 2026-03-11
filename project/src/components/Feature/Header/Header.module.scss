@@ -1,0 +1,86 @@
+@use '@styles/index.scss' as *;
+
+.header {
+  padding: $spacing-md $spacing-xl;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.headerContainer {
+  margin: 0 auto;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $spacing-xl;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.logo {
+  width: auto;
+  height: $spacing-xl;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.reactLogo {
+  animation: logo-spin 8s linear infinite;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  list-style: none;
+}
+
+.navItem {
+  padding: 0;
+  margin: 0;
+}
+
+.navLink {
+  padding: $spacing-sm $spacing-md;
+  display: block;
+  border-radius: $border-radius-sm;
+  color: #646cff;
+  transition: color 0.3s;
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(100, 108, 255, 0.1);
+    color: #535bf2;
+  }
+
+  &.active {
+    background-color: rgba(100, 108, 255, 0.15);
+    color: #535bf2;
+    text-decoration: underline;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
