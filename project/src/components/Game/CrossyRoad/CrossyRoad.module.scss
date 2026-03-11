@@ -1,4 +1,5 @@
 @use '@styles/index.scss' as *;
+@import 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap';
 
 .wrapper {
   width: 100%;
@@ -7,4 +8,107 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.gameContainer {
+  width: 100%;
+  min-height: 0;
+  position: relative;
+  flex: 1;
+}
+
+.gameCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.controls {
+  min-width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.controls > * {
+  pointer-events: auto;
+}
+
+.controlsGrid {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  gap: 10px;
+}
+
+.controlBtn {
+  width: 100%;
+  height: 40px;
+  border: 1px solid lightgray;
+  background-color: white;
+  box-shadow: 3px 5px 0 0 rgba(0, 0, 0, 0.75);
+  color: black;
+  cursor: pointer;
+  font-family: inherit;
+  outline: none;
+
+  &:first-of-type {
+    grid-column: 1 / -1;
+  }
+}
+
+.score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 2em;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.resultContainer {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  inset: 0;
+  visibility: hidden;
+}
+
+.result {
+  padding: 20px 20px 40px;
+  width: 50%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.retryBtn {
+  padding: 20px 50px;
+  margin-top: 10px;
+  border: none;
+  background-color: red;
+  font-size: inherit;
+  cursor: pointer;
+  font-family: inherit;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.gameWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: black;
 }
