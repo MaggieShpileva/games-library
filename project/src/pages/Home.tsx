@@ -8,8 +8,11 @@ export const Home: FC = () => {
       <Link to="/sapper">
         <Typography variant="regular">Сапер</Typography>
       </Link>
-      <Link to="/space-huggers">
-        <Typography variant="regular">Space Huggers</Typography>
+      <Link to="/tower-blocks">
+        <Typography variant="regular">Tower Blocks</Typography>
+      </Link>
+      <Link to="/crossy-road">
+        <Typography variant="regular">Crossy Road</Typography>
       </Link>
     </ul>
   );

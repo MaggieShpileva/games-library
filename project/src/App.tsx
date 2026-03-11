@@ -4,7 +4,8 @@ import { Home } from './pages/Home';
 import { Error } from './pages/Error';
 import { Layout } from './components/Feature';
 import { Sapper } from './components/Game/Sapper';
-import { SpaceHuggers } from './components/Game/SpaceHuggers';
+import { TowerBlocks } from './components/Game/TowerBlocks';
+import { CrossyRoad } from './components/Game/CrossyRoad';
 
 const router = createBrowserRouter([
   {
@@ -21,8 +22,12 @@ const router = createBrowserRouter([
         element: <Sapper />,
       },
       {
-        path: 'space-huggers',
-        element: <SpaceHuggers />,
+        path: 'tower-blocks',
+        element: <TowerBlocks />,
+      },
+      {
+        path: 'crossy-road',
+        element: <CrossyRoad />,
       },
     ],
   },
