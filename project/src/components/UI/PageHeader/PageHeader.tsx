@@ -16,10 +16,10 @@ export const PageHeader: FC<PageHeaderProps> = ({ title, link }) => {
       <Button
         variant="primary"
         size="small"
-        onClick={() => navigate(-1)}
+        onClick={() => navigate('/')}
         className={styles.backButton}
       >
-        Назад
+        К списку игр
       </Button>
       <Title tag="h2" className={styles.title}>
         {title}

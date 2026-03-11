@@ -1,0 +1,137 @@
+@use '@styles/index.scss' as *;
+
+/* Variables */
+$size-sm: 90px;
+$size: 140px;
+$spacing: 5px;
+$player-1-color: #dc685a;
+$player-2-color: #ecaf4f;
+$hover-color: #3d4250;
+$cell-default: #78bec5;
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #b6b5ca;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.ticTacToe {
+  margin: 50px auto 30px;
+  width: $size-sm * 3 + $spacing * 4;
+  height: $size-sm * 3 + $spacing * 4;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, $size-sm);
+  grid-template-rows: repeat(3, $size-sm);
+  gap: $spacing * 2;
+  text-align: center;
+  overflow: hidden;
+
+  @media (width >= 450px) {
+    width: $size * 3 + $spacing * 4;
+    height: $size * 3 + $spacing * 4;
+    grid-template-columns: repeat(3, $size);
+    grid-template-rows: repeat(3, $size);
+  }
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 14px;
+  background-color: $cell-default;
+  color: #fff;
+  font-size: $size-sm * 0.5;
+  text-align: center;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+  @media (width >= 450px) {
+    font-size: $size * 0.5;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: $hover-color;
+  }
+
+  &.player1 {
+    background-color: $player-1-color;
+  }
+
+  &.player2 {
+    background-color: $player-2-color;
+  }
+}
+
+.iconX {
+  font-size: 1em;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.iconO {
+  font-size: 0.85em;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.end {
+  position: absolute;
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #3d4250;
+  text-align: center;
+  inset: 0;
+
+  h3 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 300;
+
+    @media (width >= 450px) {
+      font-size: 40px;
+    }
+  }
+}
+
+.restartBtn {
+  padding: 14px 45px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3d4250;
+  color: #fff;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #262934;
+  }
+}
+
+.note {
+  padding: 0 20px;
+  margin: 0;
+  font-weight: 400;
+}

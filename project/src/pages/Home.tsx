@@ -14,6 +14,12 @@ export const Home: FC = () => {
       <Link to="/crossy-road">
         <Typography variant="regular">Crossy Road</Typography>
       </Link>
+      <Link to="/tic-tac-toe">
+        <Typography variant="regular">Tic-Tac-Toe</Typography>
+      </Link>
+      <Link to="/stick-hero">
+        <Typography variant="regular">Stick Hero</Typography>
+      </Link>
     </ul>
   );
 };

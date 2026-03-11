@@ -6,6 +6,8 @@ import { Layout } from './components/Feature';
 import { Sapper } from './components/Game/Sapper';
 import { TowerBlocks } from './components/Game/TowerBlocks';
 import { CrossyRoad } from './components/Game/CrossyRoad';
+import { TicTacToe } from './components/Game/TicTacToe';
+import { StickHero } from './components/Game/StickHero';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: 'crossy-road',
         element: <CrossyRoad />,
+      },
+      {
+        path: 'tic-tac-toe',
+        element: <TicTacToe />,
+      },
+      {
+        path: 'stick-hero',
+        element: <StickHero />,
       },
     ],
   },
