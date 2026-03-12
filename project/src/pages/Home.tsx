@@ -26,6 +26,12 @@ export const Home: FC = () => {
       <Link to="/bullseye">
         <Typography variant="regular">Bullseye</Typography>
       </Link>
+      <Link to="/snake">
+        <Typography variant="regular">Змейка</Typography>
+      </Link>
+      <Link to="/old-school-racing">
+        <Typography variant="regular">Old School Racing</Typography>
+      </Link>
     </ul>
   );
 };
