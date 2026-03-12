@@ -8,6 +8,8 @@ import { TowerBlocks } from './components/Game/TowerBlocks';
 import { CrossyRoad } from './components/Game/CrossyRoad';
 import { TicTacToe } from './components/Game/TicTacToe';
 import { StickHero } from './components/Game/StickHero';
+import { MemoryGame } from './components/Game/MemoryGame';
+import { Bullseye } from './components/Game/Bullseye';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
       {
         path: 'stick-hero',
         element: <StickHero />,
+      },
+      {
+        path: 'memory-game',
+        element: <MemoryGame />,
+      },
+      {
+        path: 'bullseye',
+        element: <Bullseye />,
       },
     ],
   },

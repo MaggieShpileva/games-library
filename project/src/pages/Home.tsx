@@ -20,6 +20,12 @@ export const Home: FC = () => {
       <Link to="/stick-hero">
         <Typography variant="regular">Stick Hero</Typography>
       </Link>
+      <Link to="/memory-game">
+        <Typography variant="regular">Memory Game</Typography>
+      </Link>
+      <Link to="/bullseye">
+        <Typography variant="regular">Bullseye</Typography>
+      </Link>
     </ul>
   );
 };

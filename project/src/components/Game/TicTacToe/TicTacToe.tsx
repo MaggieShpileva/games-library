@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { PageHeader } from '@/components/UI/PageHeader/PageHeader';
+import { PageHeader } from '@/components/UI/PageHeader';
 import styles from './TicTacToe.module.scss';
 
 type CellValue = null | '1' | '2';

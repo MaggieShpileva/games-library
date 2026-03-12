@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { PageHeader } from '@/components/UI/PageHeader/PageHeader';
+import { PageHeader } from '@/components/UI/PageHeader';
 import styles from './StickHero.module.scss';
 
 // --- Helpers (instead of extending prototypes) ---
