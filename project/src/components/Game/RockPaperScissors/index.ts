@@ -1,0 +1,1 @@
+export { RockPaperScissors } from './RockPaperScissors';

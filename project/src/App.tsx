@@ -12,6 +12,8 @@ import { MemoryGame } from './components/Game/MemoryGame';
 import { Bullseye } from './components/Game/Bullseye';
 import { Snake } from './components/Game/Snake';
 import { OldSchoolRacing } from './components/Game/OldSchoolRacing';
+import { Coloron } from './components/Game/Coloron';
+import { RockPaperScissors } from './components/Game/RockPaperScissors';
 
 const router = createBrowserRouter([
   {
@@ -58,6 +60,14 @@ const router = createBrowserRouter([
       {
         path: 'old-school-racing',
         element: <OldSchoolRacing />,
+      },
+      {
+        path: 'coloron',
+        element: <Coloron />,
+      },
+      {
+        path: 'rock-paper-scissors',
+        element: <RockPaperScissors />,
       },
     ],
   },

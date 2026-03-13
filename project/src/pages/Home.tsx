@@ -32,6 +32,12 @@ export const Home: FC = () => {
       <Link to="/old-school-racing">
         <Typography variant="regular">Old School Racing</Typography>
       </Link>
+      <Link to="/coloron">
+        <Typography variant="regular">Coloron</Typography>
+      </Link>
+      <Link to="/rock-paper-scissors">
+        <Typography variant="regular">Rock Paper Scissors</Typography>
+      </Link>
     </ul>
   );
 };

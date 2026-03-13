@@ -1,0 +1,1 @@
+export { Coloron } from './Coloron';
