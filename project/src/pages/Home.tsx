@@ -38,6 +38,12 @@ export const Home: FC = () => {
       <Link to="/rock-paper-scissors">
         <Typography variant="regular">Rock Paper Scissors</Typography>
       </Link>
+      <Link to="/skating-bunny">
+        <Typography variant="regular">Skating Bunny</Typography>
+      </Link>
+      <Link to="/simulator-game">
+        <Typography variant="regular">Simulator Game</Typography>
+      </Link>
     </ul>
   );
 };

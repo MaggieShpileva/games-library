@@ -14,6 +14,8 @@ import { Snake } from './components/Game/Snake';
 import { OldSchoolRacing } from './components/Game/OldSchoolRacing';
 import { Coloron } from './components/Game/Coloron';
 import { RockPaperScissors } from './components/Game/RockPaperScissors';
+import { SkatingBunny } from './components/Game/SkatingBunny';
+import { SimulatorGame } from './components/Game/SimulatorGame';
 
 const router = createBrowserRouter([
   {
@@ -68,6 +70,14 @@ const router = createBrowserRouter([
       {
         path: 'rock-paper-scissors',
         element: <RockPaperScissors />,
+      },
+      {
+        path: 'skating-bunny',
+        element: <SkatingBunny />,
+      },
+      {
+        path: 'simulator-game',
+        element: <SimulatorGame />,
       },
     ],
   },
