@@ -33,22 +33,32 @@ export const Home: FC = () => {
         <Typography variant="regular">Old School Racing</Typography>
       </Link>
       <Link to="/coloron">
-        <Typography variant="regular">Coloron</Typography>
+        <Typography variant="regular">
+          Мячик прыгает по разноцветным блокам
+        </Typography>
       </Link>
       <Link to="/rock-paper-scissors">
-        <Typography variant="regular">Rock Paper Scissors</Typography>
+        <Typography variant="regular">Камень, ножницы, бумага</Typography>
       </Link>
       <Link to="/skating-bunny">
-        <Typography variant="regular">Skating Bunny</Typography>
+        <Typography variant="regular">Казуалка с катанием на льду</Typography>
       </Link>
       <Link to="/simulator-game">
-        <Typography variant="regular">Simulator Game</Typography>
+        <Typography variant="regular">
+          Симулятор кодера (игра-тайкун на развитие)
+        </Typography>
       </Link>
       <Link to="/infinite-runner">
-        <Typography variant="regular">Infinite Runner</Typography>
+        <Typography variant="regular">Прыжки по платформам</Typography>
       </Link>
       <Link to="/platform">
-        <Typography variant="regular">Platform</Typography>
+        <Typography variant="regular">Проходим мышкой лабиринты</Typography>
+      </Link>
+      <Link to="/slot-machine">
+        <Typography variant="regular">Слоты</Typography>
+      </Link>
+      <Link to="/math-game">
+        <Typography variant="regular">Математика (для умных)</Typography>
       </Link>
     </ul>
   );

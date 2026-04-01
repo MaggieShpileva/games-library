@@ -18,6 +18,8 @@ import { SkatingBunny } from './components/Game/SkatingBunny';
 import { SimulatorGame } from './components/Game/SimulatorGame';
 import { InfiniteRunner } from './components/Game/InfiniteRunner';
 import { Platform } from './components/Game/Platform';
+import { SlotMachine } from './components/Game/SlotMachine';
+import { MathGame } from './components/Game/MathGame';
 
 const router = createBrowserRouter([
   {
@@ -88,6 +90,14 @@ const router = createBrowserRouter([
       {
         path: 'platform',
         element: <Platform />,
+      },
+      {
+        path: 'slot-machine',
+        element: <SlotMachine />,
+      },
+      {
+        path: 'math-game',
+        element: <MathGame />,
       },
     ],
   },
