@@ -16,6 +16,8 @@ import { Coloron } from './components/Game/Coloron';
 import { RockPaperScissors } from './components/Game/RockPaperScissors';
 import { SkatingBunny } from './components/Game/SkatingBunny';
 import { SimulatorGame } from './components/Game/SimulatorGame';
+import { InfiniteRunner } from './components/Game/InfiniteRunner';
+import { Platform } from './components/Game/Platform';
 
 const router = createBrowserRouter([
   {
@@ -78,6 +80,14 @@ const router = createBrowserRouter([
       {
         path: 'simulator-game',
         element: <SimulatorGame />,
+      },
+      {
+        path: 'infinite-runner',
+        element: <InfiniteRunner />,
+      },
+      {
+        path: 'platform',
+        element: <Platform />,
       },
     ],
   },

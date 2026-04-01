@@ -44,6 +44,12 @@ export const Home: FC = () => {
       <Link to="/simulator-game">
         <Typography variant="regular">Simulator Game</Typography>
       </Link>
+      <Link to="/infinite-runner">
+        <Typography variant="regular">Infinite Runner</Typography>
+      </Link>
+      <Link to="/platform">
+        <Typography variant="regular">Platform</Typography>
+      </Link>
     </ul>
   );
 };

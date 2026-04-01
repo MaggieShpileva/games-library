@@ -1,0 +1,308 @@
+/* stylelint-disable selector-pseudo-class-no-unknown, order/order, order/properties-order, no-descending-specificity, scss/dollar-variable-empty-line-before, at-rule-empty-line-before, scss/operator-no-unspaced, import-notation, color-function-notation, alpha-value-notation */
+@use 'sass:color';
+
+@import 'https://fonts.googleapis.com/css2?family=Teko:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap';
+
+.wrapper {
+  padding: 16px;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px 56px;
+  min-height: min(90vh, 920px);
+  margin-top: 8px;
+  font-size: 1.2vmin;
+  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  color: #fff;
+  background: color.adjust(hsl(225deg, 30%, 60%), $lightness: -20%);
+  border-radius: 12px;
+  overflow: auto;
+
+  :global {
+    $hue: 225;
+    $shift: 30;
+    $game-color: hsl($hue, 30%, 60%);
+    $light: color.adjust($game-color, $hue: $shift, $lightness: 20%);
+    $dark: color.adjust($game-color, $hue: -$shift, $lightness: -10%);
+    $darker: color.adjust($game-color, $hue: -$shift * 2, $lightness: -20%);
+    $pop: hsl($hue - 180, 80%, 60%);
+
+    $short: 200ms;
+    $mid: 600ms;
+    $ease-in: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    $ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    $grid-size: 10em;
+    $rows: 5;
+    $cols: 5;
+
+    @mixin abfab {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .level {
+      transition:
+        transform $mid $ease-out,
+        opacity $mid $ease-out;
+      opacity: 0;
+      transform: translateY(-$grid-size * 2) translateX($grid-size * 2);
+      pointer-events: none;
+
+      &[data-l='1'] {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(0, 0);
+      }
+
+      &:hover .finish {
+        transform: scale(1);
+        opacity: 1;
+        pointer-events: auto;
+        transition:
+          transform $short $ease-out,
+          opacity $short linear;
+      }
+    }
+
+    input {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    input:checked + .level + input + .level {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(0, 0);
+    }
+
+    input:checked + .level {
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: translateY($grid-size * 2) translateX(-$grid-size * 2) !important;
+    }
+
+    .button,
+    .goal {
+      position: absolute;
+      top: 5%;
+      left: 20%;
+      width: 75%;
+      height: 75%;
+      border-radius: $grid-size;
+      background: $pop;
+      text-align: center;
+      line-height: $grid-size * 0.8;
+      box-shadow: (-$grid-size * 0.05) ($grid-size * 0.05) ($grid-size * 0.05)
+        $game-color;
+      transition:
+        box-shadow $short $ease-out,
+        transform $short $ease-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateX($grid-size * 0.05) translateY(-$grid-size * 0.05);
+        box-shadow: (-$grid-size * 0.2) ($grid-size * 0.2) ($grid-size * 0.3)
+          $game-color;
+      }
+
+      &:active {
+        transform: translateX($grid-size * -0.05) translateY($grid-size * 0.05);
+        box-shadow: 0 0 0 $game-color;
+      }
+    }
+
+    .button {
+      background: $light;
+    }
+
+    input:checked + .button {
+      pointer-events: none;
+      transform: translateX($grid-size * -0.05) translateY($grid-size * 0.05);
+      box-shadow: 0 0 0 $game-color;
+    }
+
+    #level-one {
+      position: absolute;
+      z-index: 10000;
+    }
+
+    .step {
+      width: $grid-size * 1.01;
+      height: $grid-size * 1.01;
+      background: $light;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transform: translateY($grid-size * 0.5) translateX(-$grid-size * 0.5);
+      pointer-events: none;
+      transition:
+        transform $mid $ease-in,
+        opacity $mid linear;
+
+      &::before,
+      &::after {
+        content: '';
+        @include abfab;
+
+        pointer-events: none !important;
+      }
+
+      &::before {
+        left: -20%;
+        background: $dark;
+        transform-origin: 100% 100%;
+        transform: skewY(-45deg);
+        width: 20%;
+      }
+
+      &::after {
+        top: 100%;
+        background: $game-color;
+        transform-origin: 0% 0%;
+        transform: skewX(-45deg);
+        height: 20%;
+      }
+
+      &.start,
+      &.finish {
+        &::before {
+          left: -50%;
+          width: 50%;
+        }
+
+        &::after {
+          height: 50%;
+        }
+      }
+
+      &.start,
+      &:hover,
+      &:hover + .step,
+      &:hover + .path > .step:first-child,
+      &:hover + .path + .step,
+      &:hover + .bridge > input:checked + .step,
+      &:hover + .bridge > input:not(:checked) + .step + .step {
+        transform: scale(1);
+        opacity: 1;
+        pointer-events: auto;
+        transition:
+          transform $short $ease-out,
+          opacity $short linear;
+      }
+
+      @for $r from 1 through 4 {
+        &[data-r='#{$r}'] {
+          top: $r * $grid-size;
+        }
+      }
+
+      @for $c from 1 through 4 {
+        &[data-c='#{$c}'] {
+          left: $c * $grid-size;
+        }
+      }
+
+      @for $r from 0 through 4 {
+        @for $c from 0 through 4 {
+          &[data-c='#{$c}'][data-r='#{$r}'] {
+            z-index: ($r + 1) * ($cols - $c);
+          }
+        }
+      }
+    }
+
+    .bridge {
+      pointer-events: none;
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $grid-size * $cols;
+      height: $grid-size * $rows;
+      transform: perspective(100em) translate3d(-50%, -50%, 0) rotateZ(-45deg);
+    }
+
+    .message h1 {
+      margin: 0;
+      font-family: Teko, sans-serif;
+      font-size: 10em;
+    }
+
+    .message p {
+      margin-top: 0;
+      font-size: 2em;
+    }
+
+    .share {
+      display: inline-block;
+      margin-top: 2em;
+      padding: 2em;
+      border-radius: 5em;
+      background: $pop;
+      font-family: Teko, sans-serif;
+      font-size: 1em;
+      color: color.adjust($darker, $lightness: -10%);
+      text-decoration: none;
+      box-shadow: (-$grid-size * 0.05) ($grid-size * 0.05) ($grid-size * 0.05)
+        color.adjust($darker, $lightness: -10%);
+      transition:
+        box-shadow $short $ease-out,
+        transform $short $ease-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateX($grid-size * 0.1) translateY(-$grid-size * 0.1);
+        box-shadow: (-$grid-size * 0.15) ($grid-size * 0.15) ($grid-size * 0.25)
+          color.adjust($darker, $lightness: -10%);
+      }
+
+      &:active {
+        transform: translateX($grid-size * -0.05) translateY($grid-size * 0.05);
+        box-shadow: 0 0 0 color.adjust($darker, $lightness: -10%);
+      }
+    }
+
+    .message {
+      transform: rotate(45deg) translateY(-10em);
+      text-align: center;
+      width: 40em;
+    }
+
+    .sig {
+      position: absolute;
+      right: 12px;
+      bottom: 10px;
+      z-index: 2;
+      font-size: 12px;
+      font-weight: 100;
+      font-family: sans-serif;
+      color: rgb(255 255 255 / 40%);
+      letter-spacing: 2px;
+      text-decoration: none;
+
+      &:hover {
+        color: rgb(255 255 255 / 65%);
+      }
+    }
+  }
+}

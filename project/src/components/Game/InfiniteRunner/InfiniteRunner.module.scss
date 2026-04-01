@@ -1,0 +1,68 @@
+@use '@styles/index.scss' as *;
+
+.wrapper {
+  padding: 16px;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scoreRow {
+  margin: 8px 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  color: var(--text-primary, #181818);
+  font-size: 1rem;
+}
+
+.record {
+  font-weight: 600;
+}
+
+.score {
+  color: var(--text-secondary, #444);
+}
+
+.gameContainer {
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid var(--border, #181818);
+  border-radius: 0.4em;
+  background: var(--bg-secondary, #cecece);
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+
+  &:focus {
+    outline: 2px solid var(--primary, #5481e6);
+    outline-offset: 2px;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: auto;
+  }
+}
+
+.controls {
+  padding: 0;
+  margin: 12px 0 0;
+  color: var(--text-secondary, #555);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+
+  p {
+    margin: 0.25em 0;
+  }
+
+  b {
+    font-weight: 600;
+  }
+}
