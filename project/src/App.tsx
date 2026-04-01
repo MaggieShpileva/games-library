@@ -23,6 +23,7 @@ import { MathGame } from './components/Game/MathGame';
 import { Quiz } from './components/Game/Quiz';
 import { Scratch } from './components/Game/Scratch/Scratch';
 import { Jumper } from './components/Game/Jumper';
+import { AimTrainer } from './components/Game/AimTrainer';
 
 const router = createBrowserRouter([
   {
@@ -113,6 +114,10 @@ const router = createBrowserRouter([
       {
         path: 'jumper',
         element: <Jumper />,
+      },
+      {
+        path: 'aim-trainer',
+        element: <AimTrainer />,
       },
     ],
   },
