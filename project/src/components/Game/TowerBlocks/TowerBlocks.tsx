@@ -578,7 +578,7 @@ export const TowerBlocks = () => {
   return (
     <div className={styles.wrapper}>
       <PageHeader
-        title="Tower Blocks"
+        title="Постройка башни"
         link="https://codepen.io/ste-vg/pen/ppLQNW"
       />
       <div

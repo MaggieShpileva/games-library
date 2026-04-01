@@ -57,7 +57,7 @@ export const TicTacToe = () => {
   return (
     <div className={styles.wrapper}>
       <PageHeader
-        title="Tic-Tac-Toe"
+        title="Крестики-нолики"
         link="https://codepen.io/ziga-miklic/pen/QWrGyW"
       />
       <div className={styles.ticTacToe}>

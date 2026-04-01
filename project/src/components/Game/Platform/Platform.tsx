@@ -6,7 +6,7 @@ export const Platform = () => {
   return (
     <div className={styles.wrapper}>
       <PageHeader
-        title="Platform Game"
+        title="Проходим мышкой лабиринты"
         link="https://codepen.io/nathantaylor/pen/KaLvXw"
       />
       <div className={styles.game}>

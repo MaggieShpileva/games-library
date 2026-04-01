@@ -38,7 +38,7 @@ export const RockPaperScissors = () => {
   return (
     <div className={styles.wrapper}>
       <PageHeader
-        title="Rock Paper Scissors"
+        title="Камень, ножницы, бумага"
         link="https://codepen.io/alvaromontoro/pen/BaaBYyz"
       />
       <div

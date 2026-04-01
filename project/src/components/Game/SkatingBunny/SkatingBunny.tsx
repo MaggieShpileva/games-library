@@ -597,7 +597,7 @@ export const SkatingBunny = () => {
   return (
     <div className={styles.wrapper}>
       <PageHeader
-        title="Skating Bunny"
+        title="Казуалка с катанием на льду"
         link="https://codepen.io/Yakudoo/pen/poqazQo"
       />
       <div ref={containerRef} className={styles.canvasWrap}>

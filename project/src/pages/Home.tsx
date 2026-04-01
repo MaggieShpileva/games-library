@@ -9,28 +9,28 @@ export const Home: FC = () => {
         <Typography variant="regular">Сапер</Typography>
       </Link>
       <Link to="/tower-blocks">
-        <Typography variant="regular">Tower Blocks</Typography>
+        <Typography variant="regular">Постройка башни</Typography>
       </Link>
       <Link to="/crossy-road">
-        <Typography variant="regular">Crossy Road</Typography>
+        <Typography variant="regular">Crossy Road (3D)</Typography>
       </Link>
       <Link to="/tic-tac-toe">
-        <Typography variant="regular">Tic-Tac-Toe</Typography>
+        <Typography variant="regular">Крестики-нолики</Typography>
       </Link>
       <Link to="/stick-hero">
         <Typography variant="regular">Stick Hero</Typography>
       </Link>
       <Link to="/memory-game">
-        <Typography variant="regular">Memory Game</Typography>
+        <Typography variant="regular">Карточки на память</Typography>
       </Link>
       <Link to="/bullseye">
-        <Typography variant="regular">Bullseye</Typography>
+        <Typography variant="regular">Стрельба из лука</Typography>
       </Link>
       <Link to="/snake">
         <Typography variant="regular">Змейка</Typography>
       </Link>
       <Link to="/old-school-racing">
-        <Typography variant="regular">Old School Racing</Typography>
+        <Typography variant="regular">Олдскул гоночки</Typography>
       </Link>
       <Link to="/coloron">
         <Typography variant="regular">
@@ -59,6 +59,15 @@ export const Home: FC = () => {
       </Link>
       <Link to="/math-game">
         <Typography variant="regular">Математика (для умных)</Typography>
+      </Link>
+      <Link to="/quiz">
+        <Typography variant="regular">Система квиза</Typography>
+      </Link>
+      <Link to="/scratch">
+        <Typography variant="regular">Скретч</Typography>
+      </Link>
+      <Link to="/jumper">
+        <Typography variant="regular">Перепрыгивать препятствия</Typography>
       </Link>
     </ul>
   );

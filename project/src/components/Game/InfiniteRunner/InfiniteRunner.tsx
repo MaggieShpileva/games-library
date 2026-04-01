@@ -599,7 +599,7 @@ export const InfiniteRunner = () => {
   return (
     <div className={styles.wrapper}>
       <PageHeader
-        title="Infinite Runner"
+        title="Прыжки по платформам"
         link="https://codepen.io/EduardoLopes/pen/vYWpLQ"
       />
       <div className={styles.scoreRow}>

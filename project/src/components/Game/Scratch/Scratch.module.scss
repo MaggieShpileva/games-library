@@ -1,0 +1,102 @@
+@use '@styles/index.scss' as *;
+
+$coin-size: 60px;
+
+.wrapper {
+  padding: 0 16px 24px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.title {
+  margin: 8px 0 12px;
+  color: $text-primary;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.events {
+  margin-bottom: 12px;
+  height: 32px;
+  color: $text-secondary;
+  font-size: 0.95rem;
+  text-align: center;
+  user-select: none;
+}
+
+.eventsText {
+  a {
+    color: $primary-color;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.box {
+  width: var(--box-width, 250px);
+  height: var(--box-height, 250px);
+  position: relative;
+  border: 1px dashed #ccc;
+  background: #afafaf;
+  cursor: none;
+  flex-shrink: 0;
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
+}
+
+.doneScratching {
+  border-color: $success-color;
+}
+
+.cursor {
+  width: var(--coin-size, #{$coin-size});
+  height: var(--coin-size, #{$coin-size});
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+  border-radius: 50%;
+  background-color: #fff;
+  transition:
+    transform 350ms ease-out,
+    box-shadow 350ms ease-out;
+  transform: rotateY(0deg);
+  background-repeat: no-repeat;
+  background-size: var(--coin-size, #{$coin-size});
+  pointer-events: none;
+  will-change: left, top;
+}
+
+.cursorActive {
+  display: block;
+}
+
+.cursorDragging {
+  box-shadow: 3px 0 2px 2px rgba(0, 0, 0, 0.5);
+  transform: rotateY(50deg);
+}
+
+.cursorStatic {
+  margin-top: 0;
+  margin-left: 10px;
+  width: calc(var(--coin-size, #{$coin-size}) / 1.5);
+  height: var(--coin-size, #{$coin-size});
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: var(--box-width, 250px) var(--box-height, 250px);
+  pointer-events: none;
+}

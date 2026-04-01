@@ -920,7 +920,7 @@ export const SimulatorGame = () => {
   return (
     <div className={styles.container}>
       <PageHeader
-        title="Simulator Game"
+        title="Симулятор кодера (игра-тайкун на развитие)"
         link="https://codepen.io/jcoulterdesign/pen/YvgpZW"
       />
       <div className={styles.wrapper}>

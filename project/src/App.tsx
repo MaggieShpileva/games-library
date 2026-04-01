@@ -20,6 +20,9 @@ import { InfiniteRunner } from './components/Game/InfiniteRunner';
 import { Platform } from './components/Game/Platform';
 import { SlotMachine } from './components/Game/SlotMachine';
 import { MathGame } from './components/Game/MathGame';
+import { Quiz } from './components/Game/Quiz';
+import { Scratch } from './components/Game/Scratch/Scratch';
+import { Jumper } from './components/Game/Jumper';
 
 const router = createBrowserRouter([
   {
@@ -98,6 +101,18 @@ const router = createBrowserRouter([
       {
         path: 'math-game',
         element: <MathGame />,
+      },
+      {
+        path: 'quiz',
+        element: <Quiz />,
+      },
+      {
+        path: 'scratch',
+        element: <Scratch />,
+      },
+      {
+        path: 'jumper',
+        element: <Jumper />,
       },
     ],
   },

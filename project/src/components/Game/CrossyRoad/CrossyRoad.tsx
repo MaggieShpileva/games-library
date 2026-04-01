@@ -783,7 +783,7 @@ export const CrossyRoad = () => {
   return (
     <div className={styles.wrapper}>
       <PageHeader
-        title="Crossy Road"
+        title="Crossy Road (3D)"
         link="https://codepen.io/HunorMarton/pen/JwWLJo"
       />
       <div className={styles.gameWrapper}>

@@ -619,7 +619,7 @@ export const OldSchoolRacing = () => {
   return (
     <div className={styles.wrapper}>
       <PageHeader
-        title="Old School Racing"
+        title="Олдскул гоночки"
         link="https://codepen.io/johan-tirholm/pen/PGYExJ"
       />
       <div className={styles.gameContainer}>

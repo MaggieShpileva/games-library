@@ -103,10 +103,7 @@ export const SlotMachine = () => {
 
   return (
     <div className={styles.wrapper}>
-      <PageHeader
-        title="Slot Machine"
-        link="https://codepen.io/revtrax/pen/RwKoBMO"
-      />
+      <PageHeader title="Слоты" link="https://codepen.io/revtrax/pen/RwKoBMO" />
 
       <div className={styles.slot}>
         <img src={HERO} alt="" className={styles.hero} />

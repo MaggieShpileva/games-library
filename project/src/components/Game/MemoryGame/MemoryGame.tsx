@@ -153,7 +153,7 @@ export const MemoryGame = () => {
   return (
     <div className={styles.wrapper}>
       <PageHeader
-        title="Memory Game"
+        title="Карточки на память"
         link="https://codepen.io/natewiley/pen/BawOqL"
       />
       <div className={styles.wrap}>

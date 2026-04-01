@@ -550,7 +550,10 @@ export const Coloron = () => {
 
   return (
     <div className={styles.wrapper}>
-      <PageHeader title="Coloron" link="https://codepen.io/gregh/pen/yVLOyO" />
+      <PageHeader
+        title="Мячик прыгает по разноцветным блокам"
+        link="https://codepen.io/gregh/pen/yVLOyO"
+      />
       <div ref={gameViewportRef} className={styles.gameViewport}>
         <div
           ref={containerRef}

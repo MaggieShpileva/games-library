@@ -283,7 +283,7 @@ export const Bullseye = () => {
   return (
     <div className={styles.wrapper}>
       <PageHeader
-        title="Bullseye"
+        title="Стрельба из лука"
         link="https://codepen.io/pyrografix/pen/qrqpJN"
       />
       <div className={styles.gameArea}>
