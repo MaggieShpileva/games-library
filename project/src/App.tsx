@@ -28,6 +28,7 @@ import { Chess } from './components/Game/Chess';
 import { Roulette } from './components/Game/Roulette';
 import { WheelOfFortune } from './components/Game/WheelOfFortune';
 import { IdleFactoryTycoon } from './components/Game/IdleFactoryTycoon';
+import { ConnectFour } from './components/Game/ConnectFour';
 
 const router = createBrowserRouter([
   {
@@ -138,6 +139,10 @@ const router = createBrowserRouter([
       {
         path: 'idle-factory-tycoon',
         element: <IdleFactoryTycoon />,
+      },
+      {
+        path: 'connect-four',
+        element: <ConnectFour />,
       },
     ],
   },

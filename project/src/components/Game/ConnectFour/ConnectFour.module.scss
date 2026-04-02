@@ -1,0 +1,87 @@
+@use '@styles/index.scss' as *;
+
+.wrapper {
+  padding: 0 16px 24px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.body {
+  min-height: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.status {
+  margin: 0;
+  color: #b6b5ca;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.canvasWrap {
+  position: relative;
+  border-radius: 12px;
+  background: #1a1d26;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}
+
+.canvas {
+  display: block;
+  border-radius: 12px;
+  vertical-align: top;
+}
+
+.hint {
+  margin: 0;
+  max-width: 36rem;
+  color: #8a8999;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.overlay {
+  padding: 24px;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 12px;
+  background: rgba(26, 29, 38, 0.92);
+  color: #e8e6f0;
+  text-align: center;
+  inset: 0;
+}
+
+.overlayTitle {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.restartBtn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  background: #3d4250;
+  color: #fff;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background: #262934;
+  }
+}
