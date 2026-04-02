@@ -78,6 +78,9 @@ export const Home: FC = () => {
       <Link to="/roulette">
         <Typography variant="regular">Рулетка</Typography>
       </Link>
+      <Link to="/wheel-of-fortune">
+        <Typography variant="regular">Колесо фортуны</Typography>
+      </Link>
     </ul>
   );
 };

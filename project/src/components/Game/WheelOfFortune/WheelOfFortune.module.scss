@@ -1,0 +1,149 @@
+@use '@styles/index.scss' as *;
+
+.wrapper {
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.row {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.chart {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.stage {
+  width: min(100vw - 48px, 320px);
+  height: min(100vw - 48px, 320px);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.wheel {
+  --label-r: calc(100% - 10px);
+
+  position: absolute;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 8px #1d3557,
+    0 8px 24px rgba(0, 0, 0, 0.35);
+  inset: 12px;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.segmentLabel {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.segmentArm {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center center;
+}
+
+.segmentText {
+  width: 70px;
+  position: relative;
+  top: 0;
+  left: 0%;
+  display: inline-block;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.1;
+  text-align: right;
+  transform: translateX(var(--label-r)) translateY(-150%);
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 700;
+  pointer-events: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+  transform-origin: 100% 50%;
+  user-select: none;
+}
+
+.pointer {
+  margin-left: -18px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 36px solid #1d3557;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+.hub {
+  margin: -14px 0 0 -14px;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f1faee, #a8dadc);
+  box-shadow:
+    inset 0 1px 2px #fff,
+    0 2px 8px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.spinBtn {
+  min-width: 200px;
+}
+
+.question {
+  padding: 12px 0;
+  width: 100%;
+  max-width: 400px;
+  min-height: 280px;
+  position: relative;
+  flex: 1 1 280px;
+}
+
+.questionTitle {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: white;
+  font-size: 2em;
+  line-height: 1.25;
+  text-align: center;
+  transform: translateY(-50%);
+  font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+  font-weight: bold;
+}
