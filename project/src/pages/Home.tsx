@@ -20,6 +20,9 @@ export const Home: FC = () => {
       <Link to="/connect-four">
         <Typography variant="regular">4 в ряд</Typography>
       </Link>
+      <Link to="/pacman">
+        <Typography variant="regular">Pac-Man</Typography>
+      </Link>
       <Link to="/stick-hero">
         <Typography variant="regular">Stick Hero</Typography>
       </Link>

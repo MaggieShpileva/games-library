@@ -27,5 +27,19 @@ export default tseslint.config(
       ],
     },
   },
-  prettierConfig
+  prettierConfig,
+  {
+    files: ['**/components/Game/Pacman/pacmanEngine.ts'],
+    rules: {
+      '@typescript-eslint/no-this-alias': 'off',
+    },
+  },
+  {
+    files: ['**/components/Game/Pacman/pacmanGame.ts'],
+    rules: {
+      '@typescript-eslint/ban-ts-comment': 'off',
+      'no-var': 'off',
+      '@typescript-eslint/no-this-alias': 'off',
+    },
+  }
 );
