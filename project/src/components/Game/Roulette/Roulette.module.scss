@@ -1,0 +1,653 @@
+@use '@styles/index.scss' as *;
+
+.wrapper {
+  width: 100%;
+}
+
+.roulettePage {
+  cursor: default;
+  font-family: arial, sans-serif;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.container {
+  padding: 20px;
+  height: 470px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #016d29;
+  color: #fff;
+}
+
+/* notification */
+.notification {
+  width: 500px;
+  height: 318px;
+  position: absolute;
+  z-index: 10;
+  border: 8px solid #d3b201;
+  border-radius: 12px;
+  background-color: #ad0205;
+  transition: 1s;
+}
+
+.nSpan {
+  position: relative;
+  top: 105px;
+  display: block;
+  font-size: 53px;
+  text-align: center;
+}
+
+.nBtn {
+  padding: 10px;
+  width: 45%;
+  position: relative;
+  top: 116px;
+  left: 25%;
+  display: block;
+  border-radius: 15px;
+  background-color: green;
+  box-shadow: 3px 4px rgba(0, 0, 0, 0.25);
+  font-size: 32px;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.nBtn:active {
+  top: 118px;
+  left: calc(25% + 2px);
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.nsWin {
+  position: absolute;
+  left: 4px;
+}
+
+.nsWinBlock {
+  padding-right: 40px;
+  padding-left: 40px;
+  display: inline-block;
+  font-size: 21px;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+/* notification end */
+
+/* betting table */
+.bettingBoard {
+  width: 500px;
+  height: 315px;
+  border: 1px solid;
+}
+
+.bbtop {
+  margin-left: 2px;
+}
+
+.bbtoptwo {
+  padding: 12px 4px;
+  margin-left: -2px;
+  width: calc(50% - 8px);
+  display: inline-block;
+  border: 1px solid;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.number_board {
+  margin-left: 1px;
+}
+
+.number_block {
+  padding: 32px 0;
+  margin: 0 -0.2px;
+  width: 39.94px;
+  display: inline-block;
+  border: 1px solid;
+  text-align: center;
+}
+
+.nbn {
+  font-size: 20px;
+  transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.bo3_board,
+.oto_board {
+  margin-left: 1px;
+  width: 500px;
+}
+
+.bo3_block,
+.oto_block {
+  padding: 8px 5px;
+  margin-left: -1.98px;
+  width: 156.65px;
+  display: inline-block;
+  border: 1px solid;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.oto_block {
+  margin-left: -1.98px;
+  width: 114.94px;
+}
+
+.number_0 {
+  padding: 120.55px 20px;
+  margin-top: -0.516px;
+  margin-left: -57px;
+  position: absolute;
+  border: 2px solid;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.tt1_block {
+  padding: 31.65px 0;
+  margin-top: -89.75px;
+  margin-left: 498px;
+  width: 65px;
+  position: absolute;
+  border: 2px solid;
+}
+
+.winning_lines {
+  margin-top: -137px;
+  width: 603px;
+  height: 0;
+  position: absolute;
+}
+
+.wlttb {
+  margin-left: -7.75px;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  top: 269px;
+}
+
+.wlttbTop {
+  margin-top: -89px;
+  margin-left: 11px;
+  position: absolute;
+}
+
+.wlttbShift {
+  margin-top: 79px;
+}
+
+.wlrtl {
+  margin-left: 37px;
+  width: 10px;
+  height: 266px;
+  position: relative;
+  top: -3px;
+  display: inline-block;
+}
+
+.wlrtlTight {
+  margin-left: 31px;
+}
+
+.wlrtlLoose {
+  margin-left: 32px;
+}
+
+.wlcb {
+  margin-left: 13px;
+  width: 477px;
+  height: 41px;
+  position: absolute;
+  top: 255px;
+}
+
+.wlcbSecond {
+  top: 343px;
+}
+
+.cbbb {
+  margin-top: 9.5px;
+  margin-left: 22px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.cbbbMl21 {
+  margin-left: 21px;
+}
+
+.cbbbMl205 {
+  margin-left: 20.5px;
+}
+
+.cbbbMl23 {
+  margin-left: 23px;
+}
+
+.ttbbetblock {
+  margin-left: 22.52px;
+  width: 19.1px;
+  height: 10px;
+  position: relative;
+  top: -2px;
+  z-index: 3;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.rtlbb1,
+.rtlbb2,
+.rtlbb3 {
+  margin-top: 23px;
+  width: 10px;
+  height: 45px;
+}
+
+.rtlbb2,
+.rtlbb3 {
+  margin-top: 42px;
+}
+
+.spinBtn {
+  padding: 10px 5px;
+  margin-top: 329px;
+  margin-left: -392px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #ffec00;
+  color: #000;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.redNum {
+  background-color: #e0080b;
+}
+
+.blackNum {
+  background-color: #000;
+}
+
+.chipDeck,
+.bankContainer {
+  padding: 3px 0;
+  margin-top: -74px;
+  margin-left: -383px;
+  width: 310px;
+  height: 39px;
+  position: absolute;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: inset -2px -4px rgba(0, 0, 0, 0.2);
+}
+
+.bankContainer {
+  margin-top: -21px;
+}
+
+.cdChip {
+  margin-left: 9px;
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  border: 5px solid;
+  border-radius: 100%;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.cdChipSpan {
+  width: 26px;
+  position: relative;
+  top: 5px;
+  display: inherit;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cdChipActive {
+  position: relative;
+  top: -4px;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.clearBet {
+  margin-left: 22px;
+  background-color: red;
+  color: #fff;
+  border-color: red;
+}
+
+.clearBet .cdChipSpan {
+  margin-left: -2px;
+}
+
+.bank,
+.bet {
+  padding: 5px;
+  margin-left: 7px;
+  width: calc(50% - 28px);
+  display: inline-block;
+  border: 4px solid silver;
+  border-radius: 7px;
+  background-color: #000;
+  font-size: 18px;
+  text-align: right;
+}
+
+.pnBlock {
+  margin-top: 10px;
+  margin-left: -1px;
+  width: 500px;
+  height: 45px;
+  position: absolute;
+  border: 1px solid;
+}
+
+.pnContent {
+  margin-top: 3px;
+  margin-left: 4px;
+  width: 485px;
+  height: 31px;
+  position: relative;
+  display: block;
+  border: 4px solid #d5b714;
+  background-color: #fff;
+  color: #000;
+  overflow: hidden;
+}
+
+.pnRed,
+.pnBlack,
+.pnGreen {
+  padding: 10px;
+  position: relative;
+  top: 5px;
+  display: inline;
+  font-size: 19px;
+}
+
+.pnRed {
+  color: red;
+}
+
+.pnBlack {
+  color: black;
+}
+
+.pnGreen {
+  color: green;
+}
+
+/* betting table end */
+
+/* wheel — @keyframes wheelRotate/ballRotate в Roulette-keyframes.css (useRouletteGame) */
+
+.wheel {
+  width: 312px;
+  height: 312px;
+  position: relative;
+  left: -75px;
+}
+
+.ballTrack {
+  width: 212px;
+  height: 207px;
+  position: absolute;
+  top: 50px;
+  left: 47.5px;
+  z-index: 2;
+  border-radius: 100%;
+}
+
+.ball {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: -8px;
+  left: 109px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.turret {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 133px;
+  left: 134px;
+  z-index: 1;
+  border-radius: 100%;
+  background: radial-gradient(circle at 30% 30%, #f3c620, #1a1608);
+}
+
+.turretHandle {
+  width: 87px;
+  height: 14px;
+  position: absolute;
+  top: 148px;
+  left: 113px;
+  background: radial-gradient(circle at 44%, #f3c620, #6a570f);
+}
+
+.thendOne,
+.thendTwo {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border-radius: 100%;
+  background: radial-gradient(circle at 30% 30%, #f3c620, #1a1608);
+}
+
+.thendOne {
+  top: -6px;
+  left: -20px;
+}
+
+.thendTwo {
+  top: -6px;
+  left: 83px;
+}
+
+.outerRim {
+  width: 290px;
+  height: 290px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 10px solid #f3c620;
+  border-radius: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.sectorBlock {
+  width: 290px;
+  height: 290px;
+  position: absolute;
+  border-radius: 100%;
+  transition: all 1s;
+  transform: rotate(9.73deg);
+  clip: rect(0, 145px, 290px, 0);
+}
+
+.sectorGreen {
+  background-color: #016d29;
+}
+
+.sectorRed {
+  background-color: #e0080b;
+}
+
+.sectorBlack {
+  background-color: #000;
+}
+
+.sect {
+  width: 290px;
+  height: 290px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 100%;
+  clip: rect(0, 290px, 290px, 145px);
+}
+
+.double,
+.single {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  font-size: 14px;
+  transform: rotate(3deg);
+}
+
+.double {
+  margin-top: 4.5px;
+  left: 148px;
+}
+
+.single {
+  margin-top: 4.5px;
+  left: 152px;
+}
+
+.pockets {
+  width: 235px;
+  height: 235px;
+  position: absolute;
+  top: 37px;
+  left: 37px;
+  border-radius: 100%;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.pocketsRim {
+  width: 235px;
+  height: 235px;
+  position: absolute;
+  top: 34px;
+  left: 34px;
+  border: 3px solid silver;
+  border-radius: 100%;
+}
+
+.cone {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 62px;
+  left: 61px;
+  border: 3px solid #9f9a9a;
+  border-radius: 100%;
+  background: radial-gradient(circle at 100px 100px, #892c10, #000);
+}
+
+/* wheel end */
+
+/* chip */
+.chip {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  border: 3px solid;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.chipSpan {
+  position: relative;
+  top: 4px;
+  display: block;
+  color: #000;
+  font-size: 11px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.gold {
+  border-color: gold;
+}
+
+.red {
+  border-color: red;
+}
+
+.orange {
+  border-color: orange;
+}
+
+.blue {
+  border-color: blue;
+}
+
+.tt1_block .chip {
+  margin-top: -24px;
+  margin-left: 19px;
+}
+
+.number_block .chip {
+  margin-top: -24px;
+  margin-left: 7px;
+}
+
+.wlrtl .chip {
+  margin-top: 9px;
+  margin-left: -9px;
+}
+
+.cbbb .chip {
+  margin-top: -5px;
+  margin-left: -4px;
+}
+
+.ttbbetblock .chip {
+  margin-top: -8px;
+  margin-left: -7px;
+}
+
+.wlttbTop .chip {
+  margin-top: -8px;
+  margin-left: -5px;
+}
+
+.bbtoptwo .chip {
+  margin-top: -25px;
+  margin-left: 108px;
+}
+
+.number_0 .chip {
+  margin-top: -22px;
+  margin-left: -8px;
+}
+
+.bo3_block .chip {
+  margin-top: -26px;
+  margin-left: 65px;
+}
+
+.oto_block .chip {
+  margin-top: -25px;
+  margin-left: 45px;
+}
+
+/* chip end */

@@ -25,6 +25,7 @@ import { Scratch } from './components/Game/Scratch/Scratch';
 import { Jumper } from './components/Game/Jumper';
 import { AimTrainer } from './components/Game/AimTrainer';
 import { Chess } from './components/Game/Chess';
+import { Roulette } from './components/Game/Roulette';
 
 const router = createBrowserRouter([
   {
@@ -123,6 +124,10 @@ const router = createBrowserRouter([
       {
         path: 'chess',
         element: <Chess />,
+      },
+      {
+        path: 'roulette',
+        element: <Roulette />,
       },
     ],
   },

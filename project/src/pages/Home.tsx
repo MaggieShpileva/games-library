@@ -75,6 +75,9 @@ export const Home: FC = () => {
       <Link to="/chess">
         <Typography variant="regular">Шахматы</Typography>
       </Link>
+      <Link to="/roulette">
+        <Typography variant="regular">Рулетка</Typography>
+      </Link>
     </ul>
   );
 };
