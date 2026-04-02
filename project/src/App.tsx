@@ -27,6 +27,7 @@ import { AimTrainer } from './components/Game/AimTrainer';
 import { Chess } from './components/Game/Chess';
 import { Roulette } from './components/Game/Roulette';
 import { WheelOfFortune } from './components/Game/WheelOfFortune';
+import { IdleFactoryTycoon } from './components/Game/IdleFactoryTycoon';
 
 const router = createBrowserRouter([
   {
@@ -133,6 +134,10 @@ const router = createBrowserRouter([
       {
         path: 'wheel-of-fortune',
         element: <WheelOfFortune />,
+      },
+      {
+        path: 'idle-factory-tycoon',
+        element: <IdleFactoryTycoon />,
       },
     ],
   },

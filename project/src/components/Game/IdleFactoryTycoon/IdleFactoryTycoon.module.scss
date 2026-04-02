@@ -1,0 +1,42 @@
+.wrapper {
+  padding: 0 16px 24px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.gameContainer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+  min-height: 0;
+  position: relative;
+  flex: 1;
+}
+
+.toolbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.gameShell {
+  padding: 16px;
+  width: 100%;
+  min-height: min(85vh, 900px);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+@media (width <= 640px) {
+  .gameShell {
+    padding: 12px;
+    min-height: 70vh;
+    border-radius: 8px;
+  }
+}

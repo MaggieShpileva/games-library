@@ -1,0 +1,342 @@
+.idleFactoryGame {
+  background-image: url('https://i.ibb.co/PF3bVTw/3031-2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-touch-callout: none; /* iOS Safari */
+  user-select: none; /* Safari */
+  user-select: none; /* Konqueror HTML */
+  user-select: none; /* Old versions of Firefox */
+  user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.idleFactoryGame .mainFact {
+  padding: 5px;
+  height: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+  background-image: url('https://i.ibb.co/WWsGPbS/wp3269321.jpg');
+  border-style: solid;
+  overflow: auto;
+}
+
+.idleFactoryGame .item {
+  padding: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: rgb(173, 173, 173);
+  border-style: solid;
+  cursor: pointer;
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+  user-select: none; /* Safari */
+  user-select: none; /* Konqueror HTML */
+  user-select: none; /* Old versions of Firefox */
+  user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.idleFactoryGame .item:hover {
+  padding: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: grey;
+  border-style: solid;
+  float: left;
+}
+
+.idleFactoryGame .smallroboticon {
+  margin-right: 3px;
+  margin-bottom: 3px;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: rgb(173, 173, 173);
+  border-style: solid;
+}
+
+.idleFactoryGame .info {
+  padding-bottom: 10px;
+  height: 90px;
+  border-radius: 10px;
+  text-align: center;
+  border-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.idleFactoryGame .closeInfo {
+  width: 25px;
+  background-color: rgb(201, 201, 201);
+  color: red;
+  font-size: 20px;
+  border-color: black;
+  border-style: solid;
+  border-right-style: none;
+  border-top-right-radius: 7px;
+  border-top-style: none;
+  cursor: pointer;
+  float: right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  -webkit-touch-callout: none; /* iOS Safari */
+  user-select: none; /* Safari */
+  user-select: none; /* Konqueror HTML */
+  user-select: none; /* Old versions of Firefox */
+  user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.idleFactoryGame .closeInfo:hover {
+  width: 25px;
+  background-color: rgb(145, 145, 145);
+  color: red;
+  font-size: 20px;
+  border-color: black;
+  border-style: solid;
+  border-right-style: none;
+  border-top-style: none;
+  float: right;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.idleFactoryGame .levelUp {
+  padding: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: rgb(173, 173, 173);
+  border-style: solid;
+  cursor: pointer;
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+  user-select: none; /* Safari */
+  user-select: none; /* Konqueror HTML */
+  user-select: none; /* Old versions of Firefox */
+  user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.idleFactoryGame .levelUp:hover {
+  padding: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: grey;
+  border-style: solid;
+  float: left;
+}
+
+.idleFactoryGame .menuBtn {
+  padding: 5px;
+  margin-top: 20px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: rgb(173, 173, 173);
+  border-style: solid;
+  cursor: pointer;
+  float: right;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+  user-select: none; /* Safari */
+  user-select: none; /* Konqueror HTML */
+  user-select: none; /* Old versions of Firefox */
+  user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.idleFactoryGame .menuBtn:hover {
+  padding: 5px;
+  margin-top: 20px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: grey;
+  border-style: solid;
+  float: right;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.idleFactoryGame .titleMain {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(173, 173, 173);
+  border-style: solid;
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.idleFactoryGame .titleMenu {
+  height: 70px;
+}
+
+.idleFactoryGame .gameStats {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.idleFactoryGame .storeOut {
+  padding: 8px;
+  margin-top: 5px;
+  position: relative;
+  border-radius: 10px;
+  text-align: center;
+  background-image: url('https://i.ibb.co/WWsGPbS/wp3269321.jpg');
+  border-style: solid;
+  overflow: auto;
+}
+
+/* Popup Stuff */
+.idleFactoryGame .lvlBack {
+  width: 20px;
+  border-radius: 10px;
+  background-color: rgb(173, 173, 173);
+  border-style: solid;
+  float: left;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 900;
+  user-select: none;
+}
+
+.idleFactoryGame .lvlBack:hover {
+  width: 20px;
+  border-radius: 10px;
+  background-color: grey;
+  border-style: solid;
+  cursor: pointer;
+  float: left;
+}
+
+.idleFactoryGame .lvlFdw {
+  width: 20px;
+  border-radius: 10px;
+  background-color: rgb(173, 173, 173);
+  border-style: solid;
+  float: left;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 900;
+  user-select: none;
+}
+
+.idleFactoryGame .lvlFdw:hover {
+  width: 20px;
+  border-radius: 10px;
+  background-color: grey;
+  border-style: solid;
+  cursor: pointer;
+  float: left;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 900;
+}
+
+.idleFactoryGame .lvlMenuSelect {
+  line-height: 0px;
+  float: right;
+}
+
+.idleFactoryGame .popup {
+  padding: 10px;
+  padding-top: 0;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: rgb(173, 173, 173);
+  border-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.idleFactoryGame .popup::backdrop {
+  background-color: gray;
+  opacity: 0.5;
+}
+
+.idleFactoryGame .cash {
+  padding: 5px;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: rgb(173, 173, 173);
+  border-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.idleFactoryGame .iconSection {
+  max-width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.idleFactoryGame .loadScreen {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.center {
+  padding: 10px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #73ad21;
+}
+
+.idleFactoryGame .popupBuy {
+  padding: 10px;
+  padding-top: 0;
+  width: 50%;
+  border-radius: 10px;
+  background-color: rgb(173, 173, 173);
+  border-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.idleFactoryGame .popupBuy::backdrop {
+  background-color: gray;
+  opacity: 0.5;
+}
+
+.idleFactoryGame .credits {
+  padding: 10px;
+  padding-top: 0;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: rgb(173, 173, 173);
+  border-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.idleFactoryGame .credits::backdrop {
+  background-color: gray;
+  opacity: 0.5;
+}
+
+.idleFactoryGame .creditsText::selection {
+  background: gray;
+}
+
+@media (width <= 640px) {
+  .idleFactoryGame .titleMenu {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .idleFactoryGame .titleMain {
+    max-width: 100%;
+    font-size: 1rem;
+    float: none;
+  }
+
+  .idleFactoryGame .menuBtn {
+    margin-top: 0;
+    float: none;
+  }
+
+  .idleFactoryGame .storeOut {
+    text-align: left;
+  }
+
+  .idleFactoryGame .popupBuy {
+    width: min(95vw, 420px);
+  }
+}

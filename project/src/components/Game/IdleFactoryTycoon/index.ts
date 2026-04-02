@@ -1,0 +1,1 @@
+export { IdleFactoryTycoon } from './IdleFactoryTycoon';

@@ -81,6 +81,9 @@ export const Home: FC = () => {
       <Link to="/wheel-of-fortune">
         <Typography variant="regular">Колесо фортуны</Typography>
       </Link>
+      <Link to="/idle-factory-tycoon">
+        <Typography variant="regular">Idle Factory Tycoon (тайкун)</Typography>
+      </Link>
     </ul>
   );
 };
